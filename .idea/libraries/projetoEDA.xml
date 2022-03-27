@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="projetoEDA">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/projetoEDA.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
