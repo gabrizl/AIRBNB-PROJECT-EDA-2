@@ -8,11 +8,13 @@ import java.util.*;
 
 import algoritms.ReadCSV;
 import algoritms.ReadCSV2;
+import algoritms.ReadCSV3;
 import algoritms.SelectionSort;
 import algoritms.InsertionSort;
 import algoritms.InsertionSort2;
 import algoritms.MergeSort;
 import algoritms.QuickSort;
+import algoritms.QuickSort2;
 import algoritms.QuickSortWithMedian3;
 import algoritms.AboveMedia;
 import algoritms.BelowMedia;
@@ -115,7 +117,8 @@ public class Console {
         System.out.printf("Digite (8) - Executar Todos\n\n");
         System.out.printf("Digite (9) - Transformar Datas\n\n");
         System.out.printf("Digite (10) - Gerar valores Acima da Media \n\n");
-        System.out.printf("Digite (11) - Insertion Sort com arraylist \n\n");
+        System.out.printf("Digite (11) - Insertion com Arraylist \n\n");
+        System.out.printf("Digite (12) - QuickSort com lista encadeada \n\n");
         System.out.printf("Digite (0) - SAIR\n\n");
 
         int digito = getEnter();
@@ -618,11 +621,30 @@ public class Console {
 
             ReadCSV2 Insertion2Price = new ReadCSV2(
                     this.fileBase,
-                    this.basePAth + "/List/insertionWithArrayListPrice.csv",
-                    this.basePAth + "/List/insertionWithArrayListPricemetrics.csv",
+                    this.basePAth + "/List/insertionWithArrayList.csv",
+                    this.basePAth + "/List/insertionWithArrayListmetrics.csv",
                     "price", ";");
 
             Insertion2Price.readCsv(new InsertionSort2(false));
+
+            this.loading = false;
+
+        } else if (digito == 12) {
+            this.loading = true;
+            new Thread() {
+                @Override
+                public void run() {
+                    loading();
+                }
+            }.start();
+
+            ReadCSV3 Insertion2Price2 = new ReadCSV3(
+                    this.fileBase,
+                    this.basePAth + "/LinkedList/quickSortWithLinkedList.csv",
+                    this.basePAth + "/LinkedList/quickSortWithLinkedListmetrics.csv",
+                    "price", ";");
+
+            Insertion2Price2.readCsv(new QuickSort2(false));
 
             this.loading = false;
 
@@ -653,8 +675,6 @@ public class Console {
         System.out.printf("Github -> gabrizl\n\n");
         System.out.printf("Jose Axaiel - email@aluno.uepb.edu.br\n");
         System.out.printf("Github -> Axaiel \n\n");
-        System.out.printf("Natalia Maite - email@aluno.uepb.edu.br\n");
-        System.out.printf("Github -> nataliamgs \n\n");
         promptEnterKey();
         clearConsole();
     }
