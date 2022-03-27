@@ -8,7 +8,6 @@
 <ul>
   <li> Gabriel Alves</li>
   <li> José Axaiel</li>
-  <li> Natalia Maite</li>
 </ul>
 
 ## 🚀 Tecnologias
@@ -47,7 +46,7 @@
 
 ## 💻 Projeto
 
-Este projeto é uma ordenador de dados que tem como base as matérias de Estrutura de Dados e Laboratório de Estrutura de Dados.
+Este projeto é a continuação do projeto anterior que visa melhorar as ordenações por meio da utilização de outras estruturas que não são do tipo array.
 
 Relatório de Métricas: <a href="link">Acessa Relatório</a>.
 
