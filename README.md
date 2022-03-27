@@ -48,7 +48,7 @@
 
 Este projeto é a continuação do projeto anterior que visa melhorar as ordenações por meio da utilização de outras estruturas que não são do tipo array.
 
-Relatório de Métricas: <a href="link">Acessa Relatório</a>.
+Relatório: <a href="link">Acessa Relatório</a>.
 
 ## Passo a passo de execução
 
